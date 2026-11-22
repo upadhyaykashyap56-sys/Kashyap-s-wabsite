@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kashyap Mart — Online Shopping Site in India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amazon+Ember:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy-top: #131921;
+      --navy-sub: #232f3e;
+      --navy-hover: #37475a;
+      --amber: #febd69;
+      --amber-hover: #f3a847;
+      --orange-btn: #ffd814;
+      --orange-btn-hover: #f7ca00;
+      --bg-page: #e3e6e6;
+      --card-bg: #ffffff;
+      --text-main: #0f1111;
+      --text-muted: #565959;
+      --link-blue: #007185;
+      --link-hover: #c7511f;
+      --price-red: #b12704;
+      --prime-blue: #00a8e1;
+      --border-light: #d5d9d9;
+      --radius: 4px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.4;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: var(--link-blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    /* Top Header */
+    header.site-header {
+      background-color: var(--navy-top);
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-main {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 14px;
+      min-height: 60px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: baseline;
+      padding: 6px 8px;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      color: #fff;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .brand-logo:hover {
+      border-color: #fff;
+      text-decoration: none;
+    }
+
+    .brand-logo .mart-name {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+
+    .brand-logo .mart-tag {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--amber);
+      margin-left: 3px;
+    }
+
+    .deliver-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4px 8px;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .deliver-box:hover {
+      border-color: #fff;
+    }
+
+    .deliver-line1 {
+      font-size: 11px;
+      color: #cccccc;
+      margin-left: 14px;
+    }
+
+    .deliver-line2 {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* Search Bar */
+    .search-bar {
+      display: flex;
+      flex: 1;
+      height: 40px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #fff;
+      min-width: 180px;
+    }
+
+    .search-bar:focus-within {
+      outline: 3px solid #f90;
+    }
+
+    .search-select {
+      background-color: #e6e6e6;
+      color: #0f1111;
+      border: none;
+      border-right: 1px solid #cdcdcd;
+      padding: 0 8px;
+      font-size: 12px;
+      cursor: pointer;
+      max-width: 135px;
+    }
+
+    .search-input {
+      flex: 1;
+      border: none;
+      padding: 0 10px;
+      font-size: 14px;
+      color: #0f1111;
+      outline: none;
+      min-width: 0;
+    }
+
+    .search-btn {
+      width: 45px;
+      background-color: var(--amber);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #111;
+      font-size: 18px;
+    }
+
+    .search-btn:hover {
+      background-color: var(--amber-hover);
+    }
+
+    /* Right Nav Items */
+    .nav-right-group {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    .nav-box {
+      display: flex;
